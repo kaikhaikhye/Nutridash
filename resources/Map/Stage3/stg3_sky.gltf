@@ -1,0 +1,223 @@
+{
+    "asset": {
+        "copyright": "(C)2023 sprou",
+        "generator": "maya2glTF v1.4.0 3d7ba8eaf03e",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "wall_GEO",
+            "children": [
+                1
+            ],
+            "translation": [
+                -0.00390625,
+                704.4714965820313,
+                -57432.40625
+            ]
+        },
+        {
+            "name": "wall_GEO:PIV",
+            "mesh": 0,
+            "translation": [
+                0.00390625,
+                -704.4714965820313,
+                57432.40625
+            ]
+        }
+    ],
+    "meshes": [
+        {
+            "name": "wall_GEOShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 2,
+                        "TANGENT": 3,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "lambert33",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                ],
+                "baseColorTexture": {
+                    "index": 0
+                },
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "textures": [
+        {
+            "sampler": 0,
+            "source": 0
+        }
+    ],
+    "images": [
+        {
+            "uri": "stg3_land_initialShadingGroup_BaseColor.jpg"
+        }
+    ],
+    "samplers": [
+        {
+            "magFilter": 9729,
+            "minFilter": 9987,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    ],
+    "accessors": [
+        {
+            "name": "wall_GEOShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 315,
+            "max": [
+                224
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "wall_GEOShape#0/vertices/NORMAL",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 225,
+            "max": [
+                0.01941956952214241,
+                -0.0013343279715627432,
+                0.9999989867210388
+            ],
+            "min": [
+                -0.020429594442248346,
+                -0.05929109454154968,
+                0.9982250332832336
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "wall_GEOShape#0/vertices/POSITION",
+            "bufferView": 1,
+            "byteOffset": 2700,
+            "componentType": 5126,
+            "count": 225,
+            "max": [
+                62821.29296875,
+                25208.755859375,
+                -55447.7109375
+            ],
+            "min": [
+                -62821.30078125,
+                -23799.8125,
+                -59417.1015625
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "wall_GEOShape#0/vertices/TANGENT",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 225,
+            "max": [
+                1.0,
+                0.9991625547409058,
+                0.0409170538187027,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -0.9989320039749146,
+                -0.04091307148337364,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "wall_GEOShape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 225,
+            "max": [
+                0.9974994659423828,
+                0.9685320258140564
+            ],
+            "min": [
+                0.0041981041431427,
+                0.016885578632354738
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "stg3_sky/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 10800,
+            "byteLength": 630,
+            "target": 34963
+        },
+        {
+            "name": "stg3_sky/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 3600,
+            "byteLength": 5400,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "stg3_sky/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 3600,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "stg3_sky/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 9000,
+            "byteLength": 1800,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "stg3_sky/data",
+            "byteLength": 11430,
+            "uri": "stg3_sky0.bin"
+        }
+    ]
+}

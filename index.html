@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>The Glykos Dash</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://kit.fontawesome.com/69128b648c.js" crossorigin="anonymous"></script>
+  <script src="./loading.js" type="module">
+  </script>
+
+</head>
+
+<body>
+  <!-- pop up div -->
+  <div class="popup" id="popup">
+    <img src="./resources/SplashScreen/splashscreen.jpg">
+    <span>Please switch to landscape mode for the best viewing experience.</span>
+  </div>
+
+
+  <div id="stats"></div>
+  <script src="./main.js" type="module">
+  </script>
+  <div class="container" id="container">
+    <!-- HUD -->
+    <div class="ui">
+
+      <div class="stamina-layout" id="player-ui" style="display: none;">
+        <div id="boyHUD" style="display: none;">
+          <img src="./resources/HUD/Boy/Base/Base_back.png" class="baseBack">
+          <img src="./resources/HUD/Boy/Base/Base_Front.png" class="baseFront">
+        </div>
+        <div id="girlHUD" style="display: none;">
+          <img src="./resources/HUD/Girl/Base/Base_Back.png" class="baseBack">
+          <img src="./resources/HUD/Girl/Base/Base_Front.png" class="baseFront">
+        </div>
+        <div id="boyHUDstg3" style="display: none;">
+          <img src="./resources/HUD/Boy/Base_wkey/Base_wkey_Back.png" class="baseBack">
+          <img src="./resources/HUD/Boy/Base_wkey/Base_wkey_Front.png" class="baseFront">
+        </div>
+        <div id="girlHUDstg3" style="display: none;">
+          <img src="./resources/HUD/Girl/Base_wkey/Base_wkey_Back.png" class="baseBack">
+          <img src="./resources/HUD/Girl/Base_wkey/Base_wkey_Front.png" class="baseFront">
+        </div>
+
+        <div class="progress-layout">
+          <img src="./resources/HUD/Monster.png" id="monster"></img>
+          <img src="./resources/HUD/Human.png" id="runner"></img>
+        </div>
+
+        <div id="stamina-border">
+          <img src="./resources/HUD/Water_Level.gif" id="stamina">
+        </div>
+
+        <div id="sheildHUD-container" style="display: none;">
+          <img src="./resources/Shield/Shield_base.png" class="sheildHUD">
+          <img src="./resources/Shield/Blue.png" id="sheildHUD-blue">
+          <img src="./resources/Shield/Yellow.png" id="sheildHUD-yellow">
+          <img src="./resources/Shield/Green.png" id="sheildHUD-green">
+
+        </div>
+        <div class="wrapper" style="display: none;" id="shieldTimer">
+          <div class="full" id="fullShield"></div>
+        </div>
+      </div>
+
+
+
+      <div id="shieldContainer" style="display: none;">
+        <img src="./resources/Shield/Shield_UI.png" class="shieldUI">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII="
+          id="food1">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII="
+          id="food2">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII="
+          id="food3">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII="
+          id="food4">
+
+      </div>
+
+      <div id="rescuedContainer" style="display: none;">
+        <img src="./resources/Rescued_Friend_UI/Background.png" class="rescueUI">
+        <img src="./resources/Rescued_Friend_UI/Friend1_notsaved.png" id="rescue1">
+        <img src="./resources/Rescued_Friend_UI/Friend2_notsaved.png" id="rescue2">
+        <img src="./resources/Rescued_Friend_UI/Friend3_notsaved.png" id="rescue3">
+        <img src="./resources/Rescued_Friend_UI/Friend4_notsaved.png" id="rescue4">
+        <img src="./resources/Rescued_Friend_UI/Friend5_notsaved.png" id="rescue5">
+        <img src="./resources/Rescued_Friend_UI/bust/Kid1_bust-min.png" id="rescuebust1" style="display: none;">
+        <img src="./resources/Rescued_Friend_UI/bust/Kid2_bust-min.png" id="rescuebust2" style="display: none;">
+        <img src="./resources/Rescued_Friend_UI/bust/Kid3_bust-min.png" id="rescuebust3" style="display: none;">
+        <img src="./resources/Rescued_Friend_UI/bust/Kid4_bust-min.png" id="rescuebust4" style="display: none;">
+        <img src="./resources/Rescued_Friend_UI/bust/Kid5_bust-min.png" id="rescuebust5" style="display: none;">
+
+      </div>
+    </div>
+
+    <!-- pause and mute button -->
+    <div class="ui">
+      <div class="button-container">
+        <img src="./resources/Buttons/Pause_Button.png" style="display: none;" id="pauseButton"></img>
+      </div>
+    </div>
+    <div class="ui">
+      <div id="volume-container">
+        <img src="./resources/Buttons/Sound_Button.png" id="volumeButton"></img>
+        <img src="./resources/Buttons/Mute_Button.png" style="display: none;" id="muteButton"></img>
+      </div>
+    </div>
+    <!-- game over -->
+    <div class="ui" id="game-over-index">
+      <div class="game-over-layout" id="game-over">
+        <div class="tryagainbutton">
+          <img src="./resources/Buttons/Retry_Button.png" id="try-again-button">
+        </div>
+      </div>
+    </div>
+    <!-- countdown for pause -->
+    <div class="ui">
+      <div class="countdown-layout" id="countdown">
+        <div class="game-over-text" id="power-countdown-text">3</div>
+      </div>
+    </div>
+    <!-- final score BAD ENDING -->
+    <div class="ui" id="badEndingUI">
+      <div id="final-score-bad-ending">
+        <img src="./resources/Endings/Non-Perfect/Text.png" class="ending-text">
+        <img src="./resources/Buttons/Retry_Button.png" id="retry-stage-3">
+        <img src="./resources/Buttons/Continue_Button.png" id="continue-ending">
+      </div>
+    </div>
+
+    <!-- final score GOOD ENDING -->
+    <div class="ui" id="goodEndingUI">
+      <div id="final-score-good-ending">
+        <img src="./resources/Endings/Perfect/Text.png" class="ending-text">
+        <img src="./resources/Buttons/Continue_Button.png" id="finish-ending">
+      </div>
+    </div>
+
+    <!-- final score -->
+
+    <div class="ui" id="finalScoreUI">
+      <div id="final-score">
+        <img src="./resources/Recap_Text/Recap_text_001.png" id="final-score-recap-1" style="display: none;">
+        <img src="./resources/Recap_Text/Recap_text_002.png" id="final-score-recap-2" style="display: none;">
+
+        <img src="./resources/Well_Done/Well_Done_Text.png" class="final-score-text" id="well-done-text">
+        <img src="./resources/Well_Done/Well_Done_Shield badges_0 of 3 complete.png" id="final-score-badges">
+        <img src="./resources/Advisor/Advisor_mouth_closed.png" class="final-score-advisor">
+        <img src="./resources/Well_Done/Well_Done_File.png" class="final-score-file">
+        <img src="./resources/Buttons/Next_button.png" id="final-score-next">
+        <img src="./resources/Buttons/Restart_Button.png" id="final-score-restart">
+
+      </div>
+    </div>
+
+    <!-- main page -->
+    <div class="ui">
+
+      <audio id="splash-screen-music" autoplay src="./resources/Audio/00 Splash Screen Music.mp3" loop></audio>
+      <audio id="stage1-music" src="./resources/Audio/01 Stage 1 Music.mp3" loop></audio>
+      <audio id="stage2-music" src="./resources/Audio/02 Stage 2 Music.mp3" loop></audio>
+      <audio id="stage3-music" src="./resources/Audio/03 Stage 3 Music.mp3" loop></audio>
+
+      <div class="game-menu-layout" id="game-menu">
+
+        <img class="bg-image" ig="skybackground" src="./resources/SplashScreen/Layers/Background/Sky.png">
+        <img class="bg-image" id="cloudsbackground" src="./resources/SplashScreen/Layers/Background/clouds.png">
+        <img class="bg-image" id="cavelight" src="./resources/SplashScreen/Layers/Background/Light_behindcave.png">
+        <img class="bg-image" id="midground-front"
+          src="./resources/SplashScreen/Layers/Midground/Midground_together.png">
+        <img class="bg-image" id="foreground" src="./resources/SplashScreen/Layers/Foreground/Foreground_platform.png">
+        <img class="bg-image" id="characterShadow"
+          src="./resources/SplashScreen/Layers/Foreground/Characters_shadow.png">
+        <img class="bg-image" id="characters" src="./resources/SplashScreen/Layers/Foreground/Characters.png">
+
+        <img src="./resources/SplashScreen/GlykosDash_Logo.png" id="main-logo"></img>
+
+        <div class="game-menu-box">
+
+          <div>
+            <img src="./resources/SplashScreen/GlykosDash_PressAnyKey.png" id="start-button"
+              style="display: none;"></img>
+
+          </div>
+          <div id="progress-bar-container">
+
+            <div id="progress-bar"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- choose gender -->
+  <div id="gender-selection" style="display: none;">
+    <div class="select-player-title">
+      <img src="./resources/Buttons/Select_Player.png"></img>
+    </div>
+    <div class="gender-column">
+      <img src="./resources/CharacterSelect_BG/Boy/Character_selection_boy_unselected.png" id="boy-unselected"></img>
+      <img src="./resources/CharacterSelect_BG/Boy/Character_selection_boy_selected.png" id="boy-selected"
+        style="display: none;"></img>
+
+    </div>
+    <div class="gender-column">
+      <img src="./resources/CharacterSelect_BG/Girl/Character_selection_girl_unselected.png" id="girl-unselected"></img>
+      <img src="./resources/CharacterSelect_BG/Girl/Character_selection_girl_selected.png" id="girl-selected"
+        style="display: none;"></img>
+    </div>
+    <div class="select-player-button">
+      <img src="./resources/Buttons/Confirm_Button.png" style="display: none;" id="select-gender"></img>
+
+    </div>
+  </div>
+
+
+  <!-- video container w video and pause screen -->
+  <div id="video-container" style="display: none;">
+
+    <video playsinline preload="auto" id="nextStage1" src="./resources/videos/HPB_Vid_001.mp4"
+      style="display: none;"></video>
+    <video playsinline preload="auto" id="nextStage2" src="./resources/videos/HPB_Vid_002.mp4"
+      style="display: none;"></video>
+    <video playsinline preload="auto" id="nextStage3" src="./resources/videos/HPB_Vid_003.mp4"
+      style="display: none;"></video>
+    <video playsinline preload="auto" id="nextStage4" src="./resources/videos/HPB_Vid_004.mp4"
+      style="display: none;"></video>
+
+    <div class="ui" id="pauseDiv" style="display: none;">
+
+      <div class="pause-layout">
+        <div class="pause-text-container">
+          <img src="./resources/Paused/Paused_Screen_Text.png" id="pause-text">
+        </div>
+
+        <div class="pauseOptions"> <img src="./resources/Paused/Continue_Text.png" id="continueBtn"></div>
+        <div class="pauseOptions"><img src="./resources/Paused/Restart_Text.png" id="restartBtn"></div>
+        <div class="pauseOptions"><img src="./resources/Paused/Quit_Text.png" id="quitBtn"></div>
+        <div class="file-container">
+          <img src="./resources/Paused/Pause_Screen_Tips_File.png">
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- click start and loading stuff -->
+  <!-- FOR PC -->
+  <div id="click-start" style="display: none;">
+    <div class="click-start-text">
+      PRESS ANY KEY TO START
+    </div>
+  </div>
+
+  <!-- FOR IOS -->
+  <div id="click-end" style="display: none;">
+  </div>
+  <div id="loading-button-container">
+    <img src="./resources/Buttons/Next_button.png" id="loading1-next" style="display: none;">
+    <img src="./resources/Buttons/Next_button.png" id="loading2-next" style="display: none;">
+    <img src="./resources/Buttons/Next_button.png" id="loading3-next" style="display: none;">
+  </div>
+
+  <div id="loading-1" style="display: none;">
+    <div class="loading-screen-1">
+      <img src="./resources/Advisor/Advisor_mouth_opened.png" class="final-score-advisor">
+      <img src="./resources/Loading_Screen_Assets/Tutorial_BG/Tutorial_loadingbar_BG.png" class="loading-bar-bg">
+      <img src="./resources/Loading_Screen_Mission Brief/Mission_Loading_Screen_File.png" class="loading-file">
+
+      <div id="stage1-intro1">
+        <div class="loading-screen-title" id="loading-1-title">
+          MISSION Brief
+        </div>
+        <p id="stage1-intro1-text1" class="loading-screen-text"></p>
+        <p id="stage1-intro1-text2" class="loading-screen-text"></p>
+        <p id="stage1-intro1-text3" class="loading-screen-text"></p>
+        <img src="./resources/Loading_Screen_Assets/Burger_monster_TutorialBrief.png" class="loading-burger">
+
+      </div>
+      <div id="stage1-intro2" style="display: none;">
+        <div class="loading-screen-title" id="loading-1-title">
+          MISSION Brief
+        </div>
+        <p id="stage1-intro2-text1" class="loading-screen-text"></p>
+        <p id="stage1-intro2-text2" class="loading-screen-text"></p>
+        <p id="stage1-intro2-text3" class="loading-screen-text"></p>
+        <p id="stage1-intro2-text4" class="loading-screen-text"></p>
+        <p id="stage1-intro2-text5" class="loading-screen-text"></p>
+        <p id="stage1-intro2-text6" class="loading-screen-text"></p>
+        <p id="stage1-intro2-text7" class="loading-screen-text"></p>
+        <p id="stage1-intro2-text8" class="loading-screen-text"></p>
+        <p id="stage1-intro2-text9" class="loading-screen-text"></p>
+
+        <img src="./resources/Loading_Screen_Assets/Instructions illustration_Turn Left.png" class="loading-movement"
+          id="turnLeftImg">
+        <img src="./resources/Loading_Screen_Assets/Instructions illustration_Turn Right.png" class="loading-movement"
+          id="turnRightImg">
+        <img src="./resources/Loading_Screen_Assets/Instructions illustration_Jump.png" class="loading-movement"
+          id="jumpImg">
+      </div>
+
+      <div id="stage1-intro3" style="display: none;">
+        <div class="loading-screen-title" id="loading-1-title">
+          MISSION Brief
+        </div>
+        <p id="stage1-intro3-text1" class="loading-screen-text"></p>
+        <p id="stage1-intro3-text2" class="loading-screen-text"></p>
+        <p id="stage1-intro3-text3" class="loading-screen-text"></p>
+        <p id="stage1-intro3-text4" class="loading-screen-text"></p>
+        <p id="stage1-intro3-text5" class="loading-screen-text"></p>
+
+        <img src="./resources/Loading_Screen_Assets/Drink_A.png" id="loading-drink-a">
+        <img src="./resources/Loading_Screen_Assets/Drink_B.png" id="loading-drink-b">
+        <img src="./resources/Loading_Screen_Assets/Drink_C.png" id="loading-drink-c">
+        <img src="./resources/Loading_Screen_Assets/Drink_D.png" id="loading-drink-d">
+        <img src="./resources/Loading_Screen_Assets/NutriGrade.png" id="loading-grade">
+
+      </div>
+
+      <div id="loading-bar-container">
+        <div id="loading-bar-stage-1"></div>
+      </div>
+
+      <img src="./resources/Loading_Screen_Info/Loading_Text.png" class="loading-text" id="loading-text-stage-1">
+    </div>
+  </div>
+
+  <div id="loading-2" style="display: none;">
+
+    <div class="loading-screen-2">
+      <img src="./resources/Advisor/Advisor_mouth_opened.png" class="final-score-advisor">
+      <img src="./resources/Loading_Screen_Assets/Tutorial_BG/Tutorial_loadingbar_BG.png" class="loading-bar-bg">
+      <img src="./resources/Loading_Screen_Mission Brief/Mission_Loading_Screen_File.png" class="loading-file">
+
+      <div id="stage2-intro1">
+        <div class="loading-screen-title" id="loading-2-title">
+          Mission Recap
+        </div>
+        <p id="stage2-intro1-text1" class="loading-screen-text"></p>
+        <p id="stage2-intro1-text2" class="loading-screen-text"></p>
+        <p id="stage2-intro1-text3" class="loading-screen-text"></p>
+        <p id="stage2-intro1-text4" class="loading-screen-text"></p>
+      </div>
+
+      <div id="stage2-intro2" style="display: none;">
+        <div class="loading-screen-title" id="loading-2-title">
+          Mission Brief
+        </div>
+        <p id="stage2-intro2-text1" class="loading-screen-text"></p>
+        <p id="stage2-intro2-text2" class="loading-screen-text yellow-text"></p>
+        <p id="stage2-intro2-text3" class="loading-screen-text "></p>
+        <p id="stage2-intro2-text4" class="loading-screen-text"></p>
+        <p id="stage2-intro2-text5" class="loading-screen-text yellow-text"></p>
+        <p id="stage2-intro2-text6" class="loading-screen-text"></p>
+        <p id="stage2-intro2-text7" class="loading-screen-text blue-text"></p>
+        <p id="stage2-intro2-text8" class="loading-screen-text"></p>
+        <p id="stage2-intro2-text9" class="loading-screen-text green-text "></p>
+
+
+        <div class="loading-shield-container">
+          <img src="./resources/Loading_Screen_Assets/KeyItem_Shield.png" class="loading-shield">
+          <img src="./resources/Loading_Screen_Assets/KeyItem_effect.png" class="loading-shield-effect">
+        </div>
+      </div>
+
+      <div id="stage2-intro3" style="display: none;">
+        <div class="loading-screen-title" id="loading-1-title">
+          Mission Brief
+        </div>
+        <p id="stage2-intro3-text1" class="loading-screen-text"></p>
+        <p id="stage2-intro3-text2" class="loading-screen-text"></p>
+        <p id="stage2-intro3-text3" class="loading-screen-text"></p>
+        <p id="stage2-intro3-text4" class="loading-screen-text"></p>
+        <p id="stage2-intro3-text5" class="loading-screen-text"></p>
+        <p id="stage2-intro3-text6" class="loading-screen-text"></p>
+        <p id="stage2-intro3-text7" class="loading-screen-text"></p>
+        <p id="stage2-intro3-text8" class="loading-screen-text"></p>
+        <p id="stage2-intro3-text9" class="loading-screen-text"></p>
+        <p id="stage2-intro3-text10" class="loading-screen-text"></p>
+        <p id="stage2-intro3-text11" class="loading-screen-text"></p>
+        <p id="stage2-intro3-text12" class="loading-screen-text"></p>
+        <p id="stage2-intro3-text13" class="loading-screen-text"></p>
+        <p id="stage2-intro3-text14" class="loading-screen-text"></p>
+        <p id="stage2-intro3-text15" class="loading-screen-text"></p>
+        <p id="stage2-intro3-text16" class="loading-screen-text"></p>
+
+        <img src="./resources/Loading_Screen_Assets/IcecreamBird_monster_TutorialBrief.png" id="icecream-monster">
+        <img src="./resources/Loading_Screen_Assets/SoyaSauce_monster_TutorialBrief.png" id="soya-monster">
+        <img src="./resources/Loading_Screen_Assets/Instructions illustration_Slide.png" id="slideImg">
+        <img src="./resources/Loading_Screen_Assets/Instructions illustration_Jump.png" id="jumpImg2">
+      </div>
+
+      <div id="loading-bar-container-2">
+        <div id="loading-bar-stage-2"></div>
+      </div>
+
+      <img src="./resources/Loading_Screen_Info/Loading_Text.png" class="loading-text" id="loading-text-stage-2">
+
+    </div>
+  </div>
+
+  <div id="loading-3" style="display: none;">
+    <div class="loading-screen-3">
+      <img src="./resources/Advisor/Advisor_mouth_opened.png" class="final-score-advisor">
+      <img src="./resources/Loading_Screen_Assets/Tutorial_BG/Tutorial_loadingbar_BG.png" class="loading-bar-bg">
+      <img src="./resources/Loading_Screen_Mission Brief/Mission_Loading_Screen_File.png" class="loading-file">
+
+      <div id="stage3-intro1">
+        <div class="loading-screen-title" id="loading-2-title">
+          Mission Recap
+        </div>
+        <p id="stage3-intro1-text1" class="loading-screen-text"></p>
+        <p id="stage3-intro1-text2" class="loading-screen-text"></p>
+        <p id="stage3-intro1-text3" class="loading-screen-text"></p>
+        <p id="stage3-intro1-text4" class="loading-screen-text"></p>
+
+      </div>
+      <div id="stage3-intro2" style="display: none;">
+        <div class="loading-screen-title" id="loading-2-title">
+          Mission Brief
+        </div>
+        <p id="stage3-intro2-text1" class="loading-screen-text"></p>
+        <p id="stage3-intro2-text2" class="loading-screen-text"></p>
+        <p id="stage3-intro2-text3" class="loading-screen-text"></p>
+        <p id="stage3-intro2-text4" class="loading-screen-text"></p>
+        <p id="stage3-intro2-text5" class="loading-screen-text"></p>
+        <p id="stage3-intro2-text6" class="loading-screen-text"></p>
+        <img src="./resources/Loading_Screen_Assets/Instructions illustration_Wall run.png" id="wallrunImg">
+
+      </div>
+
+      <div id="stage3-intro3" style="display: none;">
+        <div class="loading-screen-title" id="loading-2-title">
+          Mission Brief
+        </div>
+        <p id="stage3-intro3-text1" class="loading-screen-text "></p>
+        <p id="stage3-intro3-text2" class="loading-screen-text"></p>
+        <p id="stage3-intro3-text3" class="loading-screen-text"></p>
+
+
+        <img src="./resources/Loading_Screen_Assets/Correct_Crate.png" class="loading-crate">
+        <img src="./resources/Rescued_Friend_UI/Friend1.png" class="friend-loading-1">
+        <img src="./resources/Rescued_Friend_UI/Friend2_notsaved.png" class="friend-loading-2">
+        <img src="./resources/Rescued_Friend_UI/Friend3_notsaved.png" class="friend-loading-3">
+        <img src="./resources/Rescued_Friend_UI/Friend4_notsaved.png" class="friend-loading-4">
+        <img src="./resources/Rescued_Friend_UI/Friend5_notsaved.png" class="friend-loading-5">
+
+      </div>
+
+      <div id="loading-bar-container-3">
+        <div id="loading-bar-stage-3"></div>
+      </div>
+
+      <img src="./resources/Loading_Screen_Info/Loading_Text.png" class="loading-text" id="loading-text-stage-3">
+    </div>
+
+
+  </div>
+
+  </div>
+
+  <!-- AUDIO -->
+  <!-- button clicks -->
+  <audio id="sound-click" src="./resources/Audio/01. Button Clicks/Next 01.wav"></audio>
+  <audio id="sound-selection" src="./resources/Audio/01. Button Clicks/Selection 01.wav"></audio>
+  <!-- collecting items -->
+  <audio id="sound-wrongitem" src="./resources/Audio/04. Collecting Items/Collect Wrong 02.wav"></audio>
+  <audio id="sound-wrongdrink" src="./resources/Audio/04. Collecting Items/Collect Wrong 01.wav"></audio>
+  <audio id="sound-correctitem" src="./resources/Audio/04. Collecting Items/Collect Correct 01.wav"></audio>
+  <audio id="sound-drink1" src="./resources/Audio/04. Collecting Items/Drinking/Gulp 01.wav"></audio>
+  <audio id="sound-drink2" src="./resources/Audio/04. Collecting Items/Drinking/Gulp 02.wav"></audio>
+  <audio id="sound-eat1" src="./resources/Audio/04. Collecting Items/Eating/Munch 01.wav"></audio>
+  <audio id="sound-eat2" src="./resources/Audio/04. Collecting Items/Eating/Munch 02.wav"></audio>
+  <!-- character -->
+  <audio id="sound-hit" src="./resources/Audio/05. Character Sounds/Getting Hit/Heartbeat Loop Fast.wav"></audio>
+  <audio id="sound-hit-pagato1" src="./resources/Audio/05. Character Sounds/Getting Hit/Pagoto Hit 01.wav"></audio>
+  <audio id="sound-hit-pagato2" src="./resources/Audio/05. Character Sounds/Getting Hit/Pagoto Hit 02.wav"></audio>
+  <audio id="sound-hit-sogias1" src="./resources/Audio/05. Character Sounds/Getting Hit/Sogias Hit 01.wav"></audio>
+  <audio id="sound-hit-sogias2" src="./resources/Audio/05. Character Sounds/Getting Hit/Sogias Hit 02.wav"></audio>
+  <audio id="sound-jump1" src="./resources/Audio/05. Character Sounds/Jump/Jump 01.wav"></audio>
+  <audio id="sound-jump2" src="./resources/Audio/05. Character Sounds/Jump/Jump 02.wav"></audio>
+  <audio id="sound-jump3" src="./resources/Audio/05. Character Sounds/Jump/Jump 03.wav"></audio>
+  <audio id="sound-jumpland" src="./resources/Audio/05. Character Sounds/Jump/Landing only.wav"></audio>
+  <audio id="sound-running" src="./resources/Audio/05. Character Sounds/Running/Footsteps 01.wav" loop></audio>
+  <audio id="sound-dash" src="./resources/Audio/05. Character Sounds/Running/Left Right 01.wav"></audio>
+  <audio id="sound-slide1" src="./resources/Audio/05. Character Sounds/Slide/Slide 01.wav"></audio>
+  <audio id="sound-slide2" src="./resources/Audio/05. Character Sounds/Slide/Slide 02.wav"></audio>
+  <audio id="sound-slide3" src="./resources/Audio/05. Character Sounds/Slide/Slide 03.wav"></audio>
+  <!-- monsters -->
+  <audio id="sound-beefteki1" src="./resources/Audio/06. Beefteki/Beefteki Growl 01.wav"></audio>
+  <audio id="sound-beefteki2" src="./resources/Audio/06. Beefteki/Beefteki Growl 02.wav"></audio>
+  <audio id="sound-beefteki3" src="./resources/Audio/06. Beefteki/Beefteki Growl 03.wav"></audio>
+  <audio id="sound-beeftekiIntro1" src="./resources/Audio/06. Beefteki/Beefteki Intro Stage 01.wav"></audio>
+  <audio id="sound-beeftekiIntro2" src="./resources/Audio/06. Beefteki/Beefteki Intro Stage 02.wav"></audio>
+  <audio id="sound-sogias1" src="./resources/Audio/07. Sogias/Sogias Swing 02.wav"></audio>
+  <audio id="sound-sogias2" src="./resources/Audio/07. Sogias/Sogias Swing 02.wav"></audio>
+  <audio id="sound-pagato1" src="./resources/Audio/08. Pagoto/Pagoto Screech 01.wav"></audio>
+  <audio id="sound-pagato2" src="./resources/Audio/08. Pagoto/Pagoto Screech 02.wav"></audio>
+  <!-- shield -->
+  <audio id="sound-shield" src="./resources/Audio/09. Shield/Shield Obtained 01.wav"></audio>
+  <!-- fall -->
+  <audio id="sound-fall" src="./resources/Audio/10. Fail/Fail Fall 01.wav"></audio>
+  <!-- agent -->
+  <audio id="sound-agent1" src="./resources/Audio/11. Agent sofia/Agent sofia_stage1_slide1_v2.mp3"></audio>
+  <audio id="sound-agent2" src="./resources/Audio/11. Agent sofia/Agent sofia_stage1_slide2_v2.mp3"></audio>
+  <audio id="sound-agent3" src="./resources/Audio/11. Agent sofia/Agent sofia_stage1_slide3_v2.mp3"></audio>
+  <audio id="sound-agent4" src="./resources/Audio/11. Agent sofia/Agent sofia_stage2_slide1_v2.mp3"></audio>
+  <audio id="sound-agent5" src="./resources/Audio/11. Agent sofia/Agent sofia_stage2_slide2_v2.mp3"></audio>
+  <audio id="sound-agent6" src="./resources/Audio/11. Agent sofia/Agent sofia_stage2_slide3_v2.mp3"></audio>
+  <audio id="sound-agent7" src="./resources/Audio/11. Agent sofia/Agent sofia_stage3_slide1_v2.mp3"></audio>
+  <audio id="sound-agent8" src="./resources/Audio/11. Agent sofia/Agent sofia_stage3_slide2_v2.mp3"></audio>
+  <audio id="sound-agent9" src="./resources/Audio/11. Agent sofia/Agent sofia_stage3_slide3_v2.mp3"></audio>
+  <audio id="sound-agentBgm" src="./resources/Audio/11. Agent sofia/Agent sofia_bgm.mp3" loop></audio>
+
+</body>
+
+</html>

@@ -1,0 +1,1266 @@
+{
+    "asset": {
+        "copyright": "(C)2023 sprou",
+        "generator": "maya2glTF v1.4.0 3d7ba8eaf03e",
+        "version": "2.0"
+    },
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0,
+    "nodes": [
+        {
+            "name": "export_GRP",
+            "children": [
+                5,
+                3,
+                2,
+                1
+            ]
+        },
+        {
+            "name": "waterbottle_GEO",
+            "mesh": 0
+        },
+        {
+            "name": "soda_GEO",
+            "mesh": 1
+        },
+        {
+            "name": "milk_GEO",
+            "children": [
+                4
+            ],
+            "translation": [
+                0.8404941558837891,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "name": "milk_GEO:PIV",
+            "mesh": 2,
+            "translation": [
+                -0.8404941558837891,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "name": "juice_GEO",
+            "children": [
+                6
+            ],
+            "translation": [
+                0.004520415794104338,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "name": "juice_GEO:PIV",
+            "mesh": 3,
+            "translation": [
+                -0.004520415794104338,
+                0.0,
+                0.0
+            ]
+        }
+    ],
+    "meshes": [
+        {
+            "name": "waterbottle_GEOShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "COLOR_0": 1,
+                        "NORMAL": 2,
+                        "POSITION": 3,
+                        "TANGENT": 4,
+                        "TEXCOORD_0": 5
+                    },
+                    "indices": 0,
+                    "mode": 4,
+                    "material": 0
+                }
+            ]
+        },
+        {
+            "name": "soda_GEOShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "COLOR_0": 7,
+                        "NORMAL": 8,
+                        "POSITION": 9,
+                        "TANGENT": 10,
+                        "TEXCOORD_0": 11
+                    },
+                    "indices": 6,
+                    "mode": 4,
+                    "material": 1
+                },
+                {
+                    "attributes": {
+                        "COLOR_0": 13,
+                        "NORMAL": 14,
+                        "POSITION": 15,
+                        "TANGENT": 16,
+                        "TEXCOORD_0": 17
+                    },
+                    "indices": 12,
+                    "mode": 4,
+                    "material": 2
+                }
+            ]
+        },
+        {
+            "name": "milk_GEOShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "COLOR_0": 19,
+                        "NORMAL": 20,
+                        "POSITION": 21,
+                        "TANGENT": 22,
+                        "TEXCOORD_0": 23
+                    },
+                    "indices": 18,
+                    "mode": 4,
+                    "material": 3
+                },
+                {
+                    "attributes": {
+                        "COLOR_0": 25,
+                        "NORMAL": 26,
+                        "POSITION": 27,
+                        "TANGENT": 28,
+                        "TEXCOORD_0": 29
+                    },
+                    "indices": 24,
+                    "mode": 4,
+                    "material": 1
+                },
+                {
+                    "attributes": {
+                        "COLOR_0": 31,
+                        "NORMAL": 32,
+                        "POSITION": 33,
+                        "TANGENT": 34,
+                        "TEXCOORD_0": 35
+                    },
+                    "indices": 30,
+                    "mode": 4,
+                    "material": 2
+                }
+            ]
+        },
+        {
+            "name": "juice_GEOShape",
+            "extras": {
+                "targetNames": []
+            },
+            "primitives": [
+                {
+                    "attributes": {
+                        "COLOR_0": 37,
+                        "NORMAL": 38,
+                        "POSITION": 39,
+                        "TANGENT": 40,
+                        "TEXCOORD_0": 41
+                    },
+                    "indices": 36,
+                    "mode": 4,
+                    "material": 3
+                },
+                {
+                    "attributes": {
+                        "COLOR_0": 43,
+                        "NORMAL": 44,
+                        "POSITION": 45,
+                        "TANGENT": 46,
+                        "TEXCOORD_0": 47
+                    },
+                    "indices": 42,
+                    "mode": 4,
+                    "material": 1
+                },
+                {
+                    "attributes": {
+                        "COLOR_0": 49,
+                        "NORMAL": 50,
+                        "POSITION": 51,
+                        "TANGENT": 52,
+                        "TEXCOORD_0": 53
+                    },
+                    "indices": 48,
+                    "mode": 4,
+                    "material": 2
+                }
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "FBXASC0482FBXASC032FBXASC045FBXASC032Default",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.5882353186607361,
+                    0.5882353186607361,
+                    0.5882353186607361,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        },
+        {
+            "name": "initialShadingGroup1",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        },
+        {
+            "name": "lambert1SG1",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        },
+        {
+            "name": "lambert1",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "accessors": [
+        {
+            "name": "waterbottle_GEOShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 252,
+            "max": [
+                247
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "waterbottle_GEOShape#0/vertices/COLOR_0",
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 248,
+            "max": [
+                0.6274510025978088,
+                0.7372549176216126,
+                0.7529412508010864,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0784313753247261,
+                0.3490196168422699,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "waterbottle_GEOShape#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 248,
+            "max": [
+                4.999999969612645e-9,
+                7.000000135093387e-9,
+                1.0
+            ],
+            "min": [
+                -4.999999969612645e-9,
+                -5.100000066704524e-8,
+                1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "waterbottle_GEOShape#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 2976,
+            "componentType": 5126,
+            "count": 248,
+            "max": [
+                19.007230758666993,
+                121.09176635742188,
+                -0.00004652099960367195
+            ],
+            "min": [
+                -19.007230758666993,
+                -9.999999717180686e-10,
+                -0.00004658100078813732
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "waterbottle_GEOShape#0/vertices/TANGENT",
+            "bufferView": 1,
+            "byteOffset": 3968,
+            "componentType": 5126,
+            "count": 248,
+            "max": [
+                1.0,
+                0.000007293000180652598,
+                4.999999969612645e-9,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -0.00005462400076794438,
+                -4.999999969612645e-9,
+                -1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "waterbottle_GEOShape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 248,
+            "max": [
+                0.6066626310348511,
+                0.97660231590271
+            ],
+            "min": [
+                0.5003942251205444,
+                0.020110130310058598
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "soda_GEOShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 504,
+            "componentType": 5123,
+            "count": 246,
+            "max": [
+                177
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "soda_GEOShape#0/vertices/COLOR_0",
+            "bufferView": 1,
+            "byteOffset": 7936,
+            "componentType": 5126,
+            "count": 178,
+            "max": [
+                0.84375,
+                0.8203125,
+                0.3420783579349518,
+                1.0
+            ],
+            "min": [
+                0.0000055840000641183,
+                0.031906697899103168,
+                0.0,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "soda_GEOShape#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 5952,
+            "componentType": 5126,
+            "count": 178,
+            "max": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "soda_GEOShape#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 8088,
+            "componentType": 5126,
+            "count": 178,
+            "max": [
+                25.928802490234376,
+                76.8715591430664,
+                2.0270097255706789
+            ],
+            "min": [
+                -25.928802490234376,
+                0.0,
+                0.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "soda_GEOShape#0/vertices/TANGENT",
+            "bufferView": 1,
+            "byteOffset": 10784,
+            "componentType": 5126,
+            "count": 178,
+            "max": [
+                1.0,
+                1.0,
+                0.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                0.0,
+                -1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "soda_GEOShape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 1984,
+            "componentType": 5126,
+            "count": 178,
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "soda_GEOShape#1/indices",
+            "bufferView": 0,
+            "byteOffset": 996,
+            "componentType": 5123,
+            "count": 18,
+            "max": [
+                11
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "soda_GEOShape#1/vertices/COLOR_0",
+            "bufferView": 1,
+            "byteOffset": 13632,
+            "componentType": 5126,
+            "count": 12,
+            "max": [
+                0.7799999713897705,
+                0.7799999713897705,
+                0.7799999713897705,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "soda_GEOShape#1/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 10224,
+            "componentType": 5126,
+            "count": 12,
+            "max": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "soda_GEOShape#1/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 10368,
+            "componentType": 5126,
+            "count": 12,
+            "max": [
+                20.75067138671875,
+                21.78761100769043,
+                2.113534927368164
+            ],
+            "min": [
+                -10.304165840148926,
+                10.30311393737793,
+                1.5
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "soda_GEOShape#1/vertices/TANGENT",
+            "bufferView": 1,
+            "byteOffset": 13824,
+            "componentType": 5126,
+            "count": 12,
+            "max": [
+                1.0,
+                0.0014778260374441746,
+                0.0,
+                1.0
+            ],
+            "min": [
+                0.999998927116394,
+                6.100000149444895e-8,
+                0.0,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "soda_GEOShape#1/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 3408,
+            "componentType": 5126,
+            "count": 12,
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "milk_GEOShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 1032,
+            "componentType": 5123,
+            "count": 246,
+            "max": [
+                134
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "milk_GEOShape#0/vertices/COLOR_0",
+            "bufferView": 1,
+            "byteOffset": 14016,
+            "componentType": 5126,
+            "count": 135,
+            "max": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "milk_GEOShape#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 10512,
+            "componentType": 5126,
+            "count": 135,
+            "max": [
+                0.0,
+                3.999999886872274e-9,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "milk_GEOShape#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 12132,
+            "componentType": 5126,
+            "count": 135,
+            "max": [
+                30.816360473632817,
+                81.69090270996094,
+                1.5
+            ],
+            "min": [
+                -29.135372161865236,
+                0.0,
+                0.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "milk_GEOShape#0/vertices/TANGENT",
+            "bufferView": 1,
+            "byteOffset": 16176,
+            "componentType": 5126,
+            "count": 135,
+            "max": [
+                1.0,
+                0.9999446272850036,
+                3.000000026176508e-9,
+                1.0
+            ],
+            "min": [
+                -0.9977412819862366,
+                -0.9999956488609314,
+                -9.999999717180686e-10,
+                -1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "milk_GEOShape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 3504,
+            "componentType": 5126,
+            "count": 135,
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                -1.1899999918796313e-7
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "milk_GEOShape#1/indices",
+            "bufferView": 0,
+            "byteOffset": 1524,
+            "componentType": 5123,
+            "count": 96,
+            "max": [
+                95
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "milk_GEOShape#1/vertices/COLOR_0",
+            "bufferView": 1,
+            "byteOffset": 18336,
+            "componentType": 5126,
+            "count": 96,
+            "max": [
+                0.84375,
+                0.8203125,
+                0.2857618033885956,
+                1.0
+            ],
+            "min": [
+                0.01162288710474968,
+                0.031906697899103168,
+                0.029567483812570573,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "milk_GEOShape#1/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 13752,
+            "componentType": 5126,
+            "count": 96,
+            "max": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "milk_GEOShape#1/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 14904,
+            "componentType": 5126,
+            "count": 96,
+            "max": [
+                16.081003189086919,
+                13.759233474731446,
+                2.0
+            ],
+            "min": [
+                -5.212356090545654,
+                6.386467933654785,
+                2.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "milk_GEOShape#1/vertices/TANGENT",
+            "bufferView": 1,
+            "byteOffset": 19872,
+            "componentType": 5126,
+            "count": 96,
+            "max": [
+                0.9428989887237548,
+                0.9428989887237548,
+                0.0,
+                1.0
+            ],
+            "min": [
+                -0.9428989887237548,
+                -0.9428990483283996,
+                0.0,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "milk_GEOShape#1/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 4584,
+            "componentType": 5126,
+            "count": 96,
+            "max": [
+                1.0,
+                0.5
+            ],
+            "min": [
+                0.0,
+                0.0
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "milk_GEOShape#2/indices",
+            "bufferView": 0,
+            "byteOffset": 1716,
+            "componentType": 5123,
+            "count": 18,
+            "max": [
+                11
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "milk_GEOShape#2/vertices/COLOR_0",
+            "bufferView": 1,
+            "byteOffset": 21408,
+            "componentType": 5126,
+            "count": 12,
+            "max": [
+                0.7799999713897705,
+                0.7799999713897705,
+                0.7799999713897705,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "milk_GEOShape#2/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 16056,
+            "componentType": 5126,
+            "count": 12,
+            "max": [
+                2.4000000209412066e-8,
+                0.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "milk_GEOShape#2/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 16200,
+            "componentType": 5126,
+            "count": 12,
+            "max": [
+                23.69998359680176,
+                17.825241088867189,
+                2.113534927368164
+            ],
+            "min": [
+                -7.017472267150879,
+                4.7292022705078129,
+                1.5
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "milk_GEOShape#2/vertices/TANGENT",
+            "bufferView": 1,
+            "byteOffset": 21600,
+            "componentType": 5126,
+            "count": 12,
+            "max": [
+                0.9986266493797302,
+                0.06595505774021149,
+                0.0,
+                1.0
+            ],
+            "min": [
+                0.9978225827217102,
+                0.05239139497280121,
+                -2.4000000209412066e-8,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "milk_GEOShape#2/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 5352,
+            "componentType": 5126,
+            "count": 12,
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "juice_GEOShape#0/indices",
+            "bufferView": 0,
+            "byteOffset": 1752,
+            "componentType": 5123,
+            "count": 18,
+            "max": [
+                17
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "juice_GEOShape#0/vertices/COLOR_0",
+            "bufferView": 1,
+            "byteOffset": 21792,
+            "componentType": 5126,
+            "count": 18,
+            "max": [
+                0.18996316194534305,
+                0.2042466253042221,
+                0.012833625078201294,
+                1.0
+            ],
+            "min": [
+                0.18996316194534305,
+                0.2042466253042221,
+                0.012833625078201294,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "juice_GEOShape#0/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 16344,
+            "componentType": 5126,
+            "count": 18,
+            "max": [
+                6.500000182541045e-8,
+                2.5000000292152437e-8,
+                1.0
+            ],
+            "min": [
+                -8.300000331473713e-8,
+                -7.500000265281416e-8,
+                1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "juice_GEOShape#0/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 16560,
+            "componentType": 5126,
+            "count": 18,
+            "max": [
+                20.702713012695314,
+                64.14816284179688,
+                0.5
+            ],
+            "min": [
+                -12.631460189819336,
+                17.635190963745118,
+                0.4999991357326508
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "juice_GEOShape#0/vertices/TANGENT",
+            "bufferView": 1,
+            "byteOffset": 22080,
+            "componentType": 5126,
+            "count": 18,
+            "max": [
+                0.7731099128723145,
+                0.9985458850860596,
+                7.900000298377563e-8,
+                1.0
+            ],
+            "min": [
+                -0.642181396484375,
+                -0.6342723965644836,
+                7.100000232185266e-8,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "juice_GEOShape#0/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 5448,
+            "componentType": 5126,
+            "count": 18,
+            "max": [
+                0.6666666269302368,
+                0.5
+            ],
+            "min": [
+                0.4166666865348816,
+                0.0
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "juice_GEOShape#1/indices",
+            "bufferView": 0,
+            "byteOffset": 1788,
+            "componentType": 5123,
+            "count": 240,
+            "max": [
+                239
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "juice_GEOShape#1/vertices/COLOR_0",
+            "bufferView": 1,
+            "byteOffset": 22368,
+            "componentType": 5126,
+            "count": 240,
+            "max": [
+                1.0,
+                0.8203125,
+                0.2857618033885956,
+                1.0
+            ],
+            "min": [
+                0.01162288710474968,
+                0.031906697899103168,
+                0.007488005794584751,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "juice_GEOShape#1/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 16776,
+            "componentType": 5126,
+            "count": 240,
+            "max": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "juice_GEOShape#1/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 19656,
+            "componentType": 5126,
+            "count": 240,
+            "max": [
+                24.83966064453125,
+                61.272701263427737,
+                2.0
+            ],
+            "min": [
+                -8.1197509765625,
+                10.125423431396485,
+                1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "juice_GEOShape#1/vertices/TANGENT",
+            "bufferView": 1,
+            "byteOffset": 26208,
+            "componentType": 5126,
+            "count": 240,
+            "max": [
+                0.9965198040008544,
+                0.9965195655822754,
+                0.0,
+                1.0
+            ],
+            "min": [
+                -0.9965198040008544,
+                -0.9965198040008544,
+                0.0,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "juice_GEOShape#1/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 5592,
+            "componentType": 5126,
+            "count": 240,
+            "max": [
+                1.0,
+                0.5
+            ],
+            "min": [
+                0.0,
+                0.0
+            ],
+            "type": "VEC2"
+        },
+        {
+            "name": "juice_GEOShape#2/indices",
+            "bufferView": 0,
+            "byteOffset": 2268,
+            "componentType": 5123,
+            "count": 66,
+            "max": [
+                43
+            ],
+            "min": [
+                0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "name": "juice_GEOShape#2/vertices/COLOR_0",
+            "bufferView": 1,
+            "byteOffset": 30048,
+            "componentType": 5126,
+            "count": 44,
+            "max": [
+                0.8515625,
+                0.7799999713897705,
+                0.7799999713897705,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "juice_GEOShape#2/vertices/NORMAL",
+            "bufferView": 2,
+            "byteOffset": 22536,
+            "componentType": 5126,
+            "count": 44,
+            "max": [
+                2.4000000209412066e-8,
+                0.0,
+                1.0
+            ],
+            "min": [
+                -9.999999974752428e-7,
+                0.0,
+                1.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "juice_GEOShape#2/vertices/POSITION",
+            "bufferView": 2,
+            "byteOffset": 23064,
+            "componentType": 5126,
+            "count": 44,
+            "max": [
+                32.58823013305664,
+                90.22698211669922,
+                2.113534927368164
+            ],
+            "min": [
+                -32.57918930053711,
+                0.0,
+                0.0
+            ],
+            "type": "VEC3"
+        },
+        {
+            "name": "juice_GEOShape#2/vertices/TANGENT",
+            "bufferView": 1,
+            "byteOffset": 30752,
+            "componentType": 5126,
+            "count": 44,
+            "max": [
+                0.9994879961013794,
+                1.0,
+                5.890000238650828e-7,
+                1.0
+            ],
+            "min": [
+                -0.022616155445575719,
+                -0.3044231832027436,
+                -2.4000000209412066e-8,
+                1.0
+            ],
+            "type": "VEC4"
+        },
+        {
+            "name": "juice_GEOShape#2/vertices/TEXCOORD_0",
+            "bufferView": 3,
+            "byteOffset": 7512,
+            "componentType": 5126,
+            "count": 44,
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0
+            ],
+            "type": "VEC2"
+        }
+    ],
+    "bufferViews": [
+        {
+            "name": "drinkscut/data/indices-2",
+            "buffer": 0,
+            "byteOffset": 62912,
+            "byteLength": 2400,
+            "target": 34963
+        },
+        {
+            "name": "drinkscut/data/vertices-16",
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 31456,
+            "byteStride": 16,
+            "target": 34962
+        },
+        {
+            "name": "drinkscut/data/vertices-12",
+            "buffer": 0,
+            "byteOffset": 31456,
+            "byteLength": 23592,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "name": "drinkscut/data/vertices-8",
+            "buffer": 0,
+            "byteOffset": 55048,
+            "byteLength": 7864,
+            "byteStride": 8,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "name": "drinkscut/data",
+            "byteLength": 65312,
+            "uri": "drinkscut0.bin"
+        }
+    ]
+}
